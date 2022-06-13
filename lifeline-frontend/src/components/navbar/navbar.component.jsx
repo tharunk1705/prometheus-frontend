@@ -67,8 +67,10 @@ const Navbar = () => {
         </button>
       </div>
       <ul
-        className={` md:flex md:justify-end md:items-center md:h-full  md:opacity-100 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto bg-secondary transition-all duration-500 ease-in ${
-          isNavOpen ? "opacity-100 top-16" : "opacity-0 top-[-490px]"
+        className={` md:flex md:justify-end md:items-center md:h-full  md:opacity-100 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto  transition-all duration-500 ease-in ${
+          isNavOpen
+            ? "opacity-100 top-16 bg-secondary"
+            : "opacity-0 top-[-490px]"
         } md:opacity-100`}
       >
         {NAV_ITEMS.map((item, index) => {

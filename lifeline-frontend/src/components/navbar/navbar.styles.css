@@ -1,5 +1,5 @@
 .navbar {
-  @apply absolute h-16 top-0 bg-secondary w-full flex md:justify-between items-center px-6 font-Outfit bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-40;
+  @apply absolute h-16 top-0 z-[200] bg-secondary w-full flex md:justify-between items-center px-6 font-Outfit bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-40;
 }
 
 .navbar-brand {
