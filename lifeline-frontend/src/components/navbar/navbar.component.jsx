@@ -47,7 +47,12 @@ const Navbar = () => {
     setIsNavOpen(!isNavOpen);
   };
   return (
-    <nav className="navbar">
+    <nav
+      className={`navbar md:shadow-none ${
+        isNavOpen &&
+        "shadow-lg shadow-accent-50  transition-all duration-500 ease-in "
+      }`}
+    >
       <div className="navbar-brand group">
         <Link to="/" className="flex items-center ">
           <ion-icon name="pulse-sharp"></ion-icon>{" "}
@@ -69,17 +74,13 @@ const Navbar = () => {
       <ul
         className={` md:flex md:justify-end md:items-center md:h-full  md:opacity-100 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto  transition-all duration-500 ease-in ${
           isNavOpen
-            ? "opacity-100 top-16 bg-secondary"
+            ? "opacity-100 top-[70px] bg-secondary drop-shadow-2xl"
             : "opacity-0 top-[-490px]"
         } md:opacity-100`}
       >
         {NAV_ITEMS.map((item, index) => {
           return (
-            <li
-              key={item.displayText + index}
-              className="navbar-list-item"
-              onClick={toggleNavbar}
-            >
+            <li key={item.displayText + index} className="navbar-list-item">
               <Link to={item.route}>{item.displayText}</Link>
             </li>
           );
