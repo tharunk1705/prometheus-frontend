@@ -1,0 +1,4 @@
+.routes {
+  overflow: scroll;
+  @apply w-full h-full  p-6;
+}

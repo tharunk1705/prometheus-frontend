@@ -1,0 +1,15 @@
+.navbar {
+  @apply absolute h-16 top-0 bg-secondary w-full flex md:justify-between items-center px-6 font-Outfit bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-40;
+}
+
+.navbar-brand {
+  @apply text-xl md:text-2xl font-bold text-accent-300 hover:text-accent-50 hover:cursor-pointer;
+}
+
+.navbar-list-item {
+  @apply text-gray-600 hover:bg-accent-200 h-full flex items-center px-8 md:px-4 hover:text-gray-100 font-semibold py-4 md:py-0 justify-end;
+}
+
+.navbar-toggler {
+  @apply md:hidden absolute right-6 top-5 text-2xl;
+}
