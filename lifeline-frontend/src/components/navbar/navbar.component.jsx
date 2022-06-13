@@ -42,6 +42,10 @@ const NAV_ITEMS = [
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const toggleNavbar = () => {
+    setIsNavOpen(!isNavOpen);
+  };
   return (
     <nav className="navbar">
       <div className="navbar-brand group">
@@ -54,7 +58,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-toggler">
-        <button onClick={() => setIsNavOpen(!isNavOpen)}>
+        <button onClick={toggleNavbar}>
           {isNavOpen ? (
             <ion-icon name="close"></ion-icon>
           ) : (
@@ -69,7 +73,11 @@ const Navbar = () => {
       >
         {NAV_ITEMS.map((item, index) => {
           return (
-            <li key={item.displayText + index} className="navbar-list-item">
+            <li
+              key={item.displayText + index}
+              className="navbar-list-item"
+              onClick={toggleNavbar}
+            >
               <Link to={item.route}>{item.displayText}</Link>
             </li>
           );

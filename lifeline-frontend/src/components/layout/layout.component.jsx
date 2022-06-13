@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import Fallback from "../../routes/fallback/fallback";
 import Home from "../../routes/home/home.route";
 import Navbar from "../navbar/navbar.component";
 
@@ -11,6 +12,7 @@ const Layout = () => {
       <div className="routes ">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="*" element={<Fallback />} />
         </Routes>
       </div>
     </>
