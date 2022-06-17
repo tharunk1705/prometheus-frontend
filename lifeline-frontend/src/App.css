@@ -18,3 +18,8 @@ body {
   height: 100vh;
   width: 100vw;
 }
+
+*::selection {
+  background-color: red;
+  color: #fff;
+}

@@ -128,7 +128,11 @@ const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const toggleNavbar = () => {
-    setIsNavOpen(!isNavOpen);
+    if (isNavOpen) {
+      setIsNavOpen(false);
+    } else {
+      setIsNavOpen(true);
+    }
   };
   return (
     <nav
@@ -160,15 +164,19 @@ const Navbar = () => {
           isNavOpen
             ? "opacity-100 top-[70px] bg-secondary drop-shadow-2xl"
             : "opacity-0 top-[-490px]"
-        } md:opacity-100`}
+        } md:opacity-100 md:bg-transparent`}
       >
         {NAV_ITEMS.map((item, index) => {
           return (
-            <li key={item.displayText + index} className="navbar-list-item">
-              <Link to={item.route}>
+            <Link
+              to={item.route}
+              className="navbar-list-item"
+              onClick={toggleNavbar}
+            >
+              <li key={item.displayText + index}>
                 {item.displayText} {item.icon}
-              </Link>
-            </li>
+              </li>
+            </Link>
           );
         })}
       </ul>

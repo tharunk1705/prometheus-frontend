@@ -1,6 +1,6 @@
 const Home = () => {
   return (
-    <div className="pt-16">
+    <div className="pt-16 text-justify">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur
       totam reprehenderit vero aspernatur error consequatur recusandae unde eos
       deserunt similique, optio, tempora nam. Consectetur deserunt odio
