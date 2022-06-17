@@ -1,4 +1,4 @@
 .routes {
   overflow: scroll;
-  @apply w-full h-full  p-6;
+  @apply w-full h-full  p-6 text-gray-800;
 }

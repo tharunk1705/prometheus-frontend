@@ -172,8 +172,9 @@ const Navbar = () => {
               to={item.route}
               className="navbar-list-item"
               onClick={toggleNavbar}
+              key={item.displayText + index}
             >
-              <li key={item.displayText + index}>
+              <li>
                 {item.displayText} {item.icon}
               </li>
             </Link>
